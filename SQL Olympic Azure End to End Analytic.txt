@@ -1,0 +1,14 @@
+SELECT * FROM athletes;
+SELECT * FROM coaches;
+SELECT * FROM entriesgender;
+SELECT * FROM medals;
+SELECT * FROM teams;
+
+SELECT Country , COUNT(*) AS TotalAthletes
+FROM athletes
+GROUP BY Country
+ORDER BY TotalAtheletes DESC;
+
+SELECT Team_Country, SUM(Gold) Total_Gold , SUM(Silver) Total_Silver, SUM(Bronze) Total_Bronze
+FROM medals
+GROUP BY Team_Country;
